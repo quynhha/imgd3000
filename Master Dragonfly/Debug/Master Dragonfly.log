@@ -1,0 +1,50 @@
+﻿  DisplayManager.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(103,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(105,42): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(167,33): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(173,35): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(232,20): warning C4018: '<': signed/unsigned mismatch
+  GameManager.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\GameManager.cpp(106,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\GameManager.cpp(106,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\GameManager.cpp(107,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\GameManager.cpp(107,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  InputManager.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(82,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(82,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(91,67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(91,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(113,81): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\InputManager.cpp(113,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+  Object.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\Object.cpp(195,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\Object.cpp(196,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\Object.cpp(197,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\Object.cpp(197,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Points.cpp
+  Reticle.cpp
+  Star.cpp
+  ViewObject.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\ViewObject.cpp(102,21): warning C4018: '<': signed/unsigned mismatch
+  WorldManager.cpp
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(40,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(40,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(41,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(41,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(301,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(304,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(311,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(314,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(321,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\WorldManager.cpp(321,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+C:\Users\Quynh Ha\source\repos\Master Dragonfly\Master Dragonfly\DisplayManager.cpp(273): warning C4715: 'df::DisplayManager::drawFrame': not all control paths return a value
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'x86'

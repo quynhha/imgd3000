@@ -1,0 +1,30 @@
+<HEADER>
+frames 3
+width 9
+height 5
+color blue
+slowdown 5
+</HEADER>
+<BODY>
+    ,/  *
+ _,'/_ ( 
+ ('Y') ) 
+ /   \/  
+(\|||/)  
+end
+    ,/   
+ _,'/_ )o
+ ('Y') ( 
+ /   \_/ 
+(\|||/)  
+end
+    ,/   
+ _,'/_ , 
+ (^.^) ) 
+ /   \/  
+(\|||/)  
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
