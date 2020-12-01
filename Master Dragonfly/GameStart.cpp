@@ -25,7 +25,7 @@ GameStart::GameStart() {
   setType("GameStart");
 
   // Link to "message" sprite.
-  df::Sprite *p_temp_sprite = RM.getSprite("gamestart");
+  df::Sprite *p_temp_sprite = RM.getSprite("forest");
   if (!p_temp_sprite) 
     LM.writeLog("GameStart::GameStart(): Warning! Sprite 'gamestart' not found");
   else {
@@ -88,6 +88,11 @@ void GameStart::start() {
   
   new QuitButton; 
   
+  df::ViewObject* p_vo = new df::ViewObject; // Count of nukes.
+  p_vo->setLocation(df::TOP_LEFT);
+  p_vo->setViewString("Nukes");
+  p_vo->setValue(1);
+  p_vo->setColor(df::YELLOW);
 
   // Pause start music.
   p_music->pause();

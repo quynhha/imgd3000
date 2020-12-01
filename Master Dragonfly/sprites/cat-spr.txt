@@ -1,12 +1,12 @@
 <HEADER>
 frames 3
 width 9
-height 5
+height 6
 color blue
-slowdown 5
+slowdown 10
 </HEADER>
-<BODY>
-    ,/  *
+<BODY>         
+   ,/  * 
  _,'/_ ( 
  ('Y') ) 
  /   \/  
@@ -14,13 +14,13 @@ slowdown 5
 end
     ,/   
  _,'/_ )o
- ('Y') ( 
+ ('Y') (  
  /   \_/ 
 (\|||/)  
 end
-    ,/   
- _,'/_ , 
- (^.^) ) 
+   ,/  * 
+ _,'/_ ( 
+ ('Y') ) 
  /   \/  
 (\|||/)  
 end

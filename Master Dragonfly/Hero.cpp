@@ -25,7 +25,7 @@ Hero::Hero() {
 
   // Link to "ship" sprite.
   df::Sprite *p_temp_sprite;
-  p_temp_sprite = RM.getSprite("box");
+  p_temp_sprite = RM.getSprite("ship");
   if (!p_temp_sprite)
     LM.writeLog("Hero::Hero(): Warning! Sprite '%s' not found", "ship");
   else {
@@ -54,7 +54,7 @@ Hero::Hero() {
   // Set attributes that control actions.
   move_slowdown = 2;
   move_countdown = move_slowdown;
-  fire_slowdown = 30;
+  fire_slowdown = 15;
   fire_countdown = fire_slowdown;
   nuke_count = 1;
 }
