@@ -25,7 +25,7 @@ Hero::Hero() {
 
   // Link to "ship" sprite.
   df::Sprite *p_temp_sprite;
-  p_temp_sprite = RM.getSprite("cat");
+  p_temp_sprite = RM.getSprite("box");
   if (!p_temp_sprite)
     LM.writeLog("Hero::Hero(): Warning! Sprite '%s' not found", "ship");
   else {
@@ -35,7 +35,7 @@ Hero::Hero() {
 
   // Player controls hero, so register for input events.
   registerInterest(df::KEYBOARD_EVENT);
-  registerInterest(df::MOUSE_EVENT);
+  registerInterest(df::MSE_EVENT);
 
   // Need to update rate control each step.
   registerInterest(df::STEP_EVENT);
@@ -89,9 +89,9 @@ int Hero::eventHandler(const df::Event *p_e) {
     return 1;
   }
 
-  if (p_e->getType() == df::MOUSE_EVENT) {
-    const df::EventMouse *p_mouse_event = dynamic_cast <const df::EventMouse *> (p_e);
-    mouse(p_mouse_event);
+  if (p_e->getType() == df::MSE_EVENT) {
+    const df::EventMouse *p_MSE_EVENT = dynamic_cast <const df::EventMouse *> (p_e);
+    mouse(p_MSE_EVENT);
     return 1;
   }
 
@@ -105,12 +105,12 @@ int Hero::eventHandler(const df::Event *p_e) {
 }
 
 // Take appropriate action according to mouse action.
-void Hero::mouse(const df::EventMouse *p_mouse_event) {
+void Hero::mouse(const df::EventMouse *p_MSE_EVENT) {
 
   // Pressed button?
-  if ((p_mouse_event->getMouseAction() == df::CLICKED) &&
-      (p_mouse_event->getMouseButton() == df::Mouse::LEFT))
-    fire(p_mouse_event->getMousePosition());
+  if ((p_MSE_EVENT->getMouseAction() == df::CLICKED) &&
+      (p_MSE_EVENT->getMouseButton() == df::Mouse::LEFT))
+    fire(p_MSE_EVENT->getMousePosition());
 }
 
 // Take appropriate action according to key pressed.

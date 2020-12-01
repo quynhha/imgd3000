@@ -148,6 +148,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DisplayManager.cpp" />
     <ClCompile Include="Event.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="ObjectList.cpp" />
     <ClCompile Include="ObjectListIterator.cpp" />
     <ClCompile Include="Points.cpp" />
+    <ClCompile Include="QuitButton.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="Saucer.cpp" />
@@ -188,6 +190,7 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="DisplayManager.h" />
@@ -213,6 +216,7 @@
     <ClInclude Include="ObjectList.h" />
     <ClInclude Include="ObjectListIterator.h" />
     <ClInclude Include="Points.h" />
+    <ClInclude Include="QuitButton.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="Saucer.h" />

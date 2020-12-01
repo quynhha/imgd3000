@@ -26,5 +26,7 @@ namespace df {
 
 	std::string toString(int i);
 
+	bool boxContainsPosition(Box b, Vector p); 
+
 } // End of df namespace
 #endif // __UTILITY_H__

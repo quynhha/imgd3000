@@ -16,6 +16,7 @@
 #include "Music.h"
 #include "Points.h"
 #include "Saucer.h"
+#include "QuitButton.h"
 
 // Define registerInterest in case engine does not.
 static void registerInterest(std::string s) {};
@@ -34,7 +35,7 @@ GameStart::GameStart() {
 
   // Put in center of screen.
   setLocation(df::CENTER_CENTER);
-  
+
 
   // Register for "keyboard" event.
   registerInterest(df::KEYBOARD_EVENT);
@@ -84,11 +85,9 @@ void GameStart::start() {
 
   // Setup heads-up display.
   new Points;		                     // Points display.
-  df::ViewObject *p_vo = new df::ViewObject; // Count of nukes.
-  p_vo->setLocation(df::TOP_LEFT);
-  p_vo->setViewString("Nukes");
-  p_vo->setValue(1);
-  p_vo->setColor(df::YELLOW);
+  
+  new QuitButton; 
+  
 
   // Pause start music.
   p_music->pause();

@@ -16,7 +16,7 @@ class Hero : public df::Object {
   int move_slowdown;
   int move_countdown;
   int nuke_count;
-  void mouse(const df::EventMouse *p_mouse_event);
+  void mouse(const df::EventMouse *p_MSE_EVENT);
   void kbd(const df::EventKeyboard *p_keyboard_event);
   void move(int dy);
   void fire(df::Vector target);

@@ -114,3 +114,8 @@ std::string df::toString(int i) {
 	ss << i;;				//Add a number to stream.
 	return ss.str();		//Return string with contents of stream
 }
+
+bool df::boxContainsPosition(Box b, Vector p)
+{
+	return df::boxIntersectsBox(b, df::Box(p, 0, 0));
+}

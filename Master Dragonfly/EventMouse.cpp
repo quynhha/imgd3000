@@ -7,7 +7,7 @@
 #include "LogManager.h"
 
 df::EventMouse::EventMouse() {
-	setType(MOUSE_EVENT);
+	setType(MSE_EVENT);
 }
 
 void df::EventMouse::setMouseAction(EventMouseAction new_mouse_action) {
