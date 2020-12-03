@@ -48,6 +48,11 @@ int main(int argc, char *argv[]) {
 void loadResources(void) {
     RM.loadSprite("sprites/saucer-spr.txt", "saucer");
     RM.loadSprite("sprites/cat-spr.txt", "cat");
+    RM.loadSprite("sprites/dog-spr.txt", "dog");
+    RM.loadSprite("sprites/dog-spr-2.txt", "dog-left");
+    RM.loadSprite("sprites/dog-idle.txt", "dog-idle");
+    RM.loadSprite("sprites/slime-spr.txt", "slime");
+    RM.loadSprite("sprites/bg-spr.txt", "bg");
     RM.loadSprite("sprites/intotheFor-spr.txt", "forest");
     RM.loadSprite("sprites/ship-spr.txt", "ship");
     RM.loadSprite("sprites/bullet-spr.txt", "bullet");

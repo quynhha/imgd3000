@@ -25,7 +25,7 @@ static void registerInterest(std::string s) {};
 Saucer::Saucer() {
 
   // Setup "saucer" sprite.
-  df::Sprite *p_temp_sprite = RM.getSprite("saucer");
+  df::Sprite *p_temp_sprite = RM.getSprite("slime");
   if (!p_temp_sprite) 
     LM.writeLog("Saucer::Saucer(): Warning! Sprite '%s' not found", "saucer");
   else {
@@ -125,12 +125,7 @@ void Saucer::hit(const df::EventCollision *p_collision_event) {
     new Saucer;
   }
 
-  // If Hero, mark both objects for destruction.
-  if (((p_collision_event -> getObject1() -> getType()) == "Hero") || 
-      ((p_collision_event -> getObject2() -> getType()) == "Hero")) {
-    WM.markForDelete(p_collision_event -> getObject1());
-    WM.markForDelete(p_collision_event -> getObject2());
-  }
+  
 
 }
 

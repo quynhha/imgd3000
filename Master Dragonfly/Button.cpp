@@ -56,8 +56,8 @@ df::Color df::Button::getDefaultColor() const
 
 bool df::Button::mouseOverButton(const EventMouse* p_e) const
 {
-   int width = getViewString().size();
-   int height = 1; 
+   auto width = getViewString().size();
+   auto height = 1; 
    if (getBorder())
    {
        width = width + 4; 

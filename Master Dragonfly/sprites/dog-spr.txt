@@ -1,0 +1,24 @@
+<HEADER>
+frames 3
+width 10
+height 3
+color blue
+slowdown 2
+</HEADER>
+<BODY>
+ .^.^____/
+`-. ___ ) 
+  ||  ||  
+end
+ .^.^____/
+`-. ___ ) 
+  /|  /|  
+end
+ .^.^____/
+`-. ___ ) 
+  |/  |/  
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

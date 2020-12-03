@@ -1,0 +1,40 @@
+<HEADER>
+frames 4
+width 13
+height 6
+color green
+slowdown 80
+</HEADER>
+<BODY>
+   _______   
+  /       \  
+ /         \ 
+/      0  0 \
+\     * __  /
+ \_________/ 
+end
+   _______   
+  /       \  
+ /         \ 
+/      0  0 \
+\     * __  /
+ \_\-----\_/ 
+end
+   _______   
+  /       \  
+ /         \ 
+/      0  0 \
+\     * __  /
+ \_\-----\_/ 
+end
+   _______   
+  /       \  
+ /         \ 
+/      0  0 \
+\     * __  /
+ \_________/ 
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

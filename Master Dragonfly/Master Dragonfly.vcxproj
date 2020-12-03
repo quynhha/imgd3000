@@ -165,6 +165,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="GameStart.cpp" />
+    <ClCompile Include="HitPoints.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectList.cpp" />
     <ClCompile Include="ObjectListIterator.cpp" />
+    <ClCompile Include="Platform.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="QuitButton.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
@@ -207,6 +209,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="GameStart.h" />
+    <ClInclude Include="HitPoints.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LogManager.h" />
@@ -215,6 +218,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectList.h" />
     <ClInclude Include="ObjectListIterator.h" />
+    <ClInclude Include="Platform.h" />
     <ClInclude Include="Points.h" />
     <ClInclude Include="QuitButton.h" />
     <ClInclude Include="ResourceManager.h" />

@@ -1,0 +1,16 @@
+<HEADER>
+frames 1
+width 10
+height 3
+color blue
+slowdown 2
+</HEADER>
+<BODY>
+\____^.^. 
+(____ .--`
+ ||  ||   
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

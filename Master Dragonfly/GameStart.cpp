@@ -94,6 +94,12 @@ void GameStart::start() {
   p_vo->setValue(1);
   p_vo->setColor(df::YELLOW);
 
+  df::ViewObject* p_hp = new df::ViewObject; // Count of HPs.
+  p_hp->setLocation(df::TOP_CENTER);
+  p_hp->setViewString("HP");
+  p_hp->setValue(3);
+  p_hp->setColor(df::RED);
+
   // Pause start music.
   p_music->pause();
 

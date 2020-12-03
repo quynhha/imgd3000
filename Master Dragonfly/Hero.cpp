@@ -10,6 +10,7 @@
 #include "LogManager.h"
 #include "ResourceManager.h"
 #include "WorldManager.h"
+#include <Windows.h>
 
 // Game includes.
 #include "Bullet.h"
@@ -25,7 +26,7 @@ Hero::Hero() {
 
   // Link to "ship" sprite.
   df::Sprite *p_temp_sprite;
-  p_temp_sprite = RM.getSprite("ship");
+  p_temp_sprite = RM.getSprite("dog-idle");
   if (!p_temp_sprite)
     LM.writeLog("Hero::Hero(): Warning! Sprite '%s' not found", "ship");
   else {
@@ -57,26 +58,14 @@ Hero::Hero() {
   fire_slowdown = 15;
   fire_countdown = fire_slowdown;
   nuke_count = 1;
+  life_count = 3;
 }
   
 Hero::~Hero() {
 
-  // Create GameOver object.
-  GameOver *p_go = new GameOver;
-  
-  // Make big explosion.
-  for (int i=-8; i<=8; i+=5) {
-    for (int j=-5; j<=5; j+=3) {
-      df::Vector temp_pos = this->getPosition();
-      temp_pos.setX(this->getPosition().getX() + i);
-      temp_pos.setY(this->getPosition().getY() + j);
-      Explosion *p_explosion = new Explosion;
-      p_explosion -> setPosition(temp_pos);
-    }
-  }
- 
-  // Mark Reticle for deletion.
-  WM.markForDelete(p_reticle);
+	new GameOver;
+	// Mark Reticle for deletion.
+	WM.markForDelete(p_reticle);
 }
  
 // Handle event.
@@ -99,6 +88,14 @@ int Hero::eventHandler(const df::Event *p_e) {
     step();
     return 1;
   }
+
+  if (p_e->getType() == df::COLLISION_EVENT) {
+	  // handle collisions with various other objects
+	  const df::EventCollision* p_collision_event =
+		  dynamic_cast <df::EventCollision const*> (p_e);
+	  hit(p_collision_event);
+	  return 1;
+  }
  
   // If get here, have ignored this event.
   return 0;
@@ -117,19 +114,23 @@ void Hero::mouse(const df::EventMouse *p_MSE_EVENT) {
 void Hero::kbd(const df::EventKeyboard *p_keyboard_event) {
 
   switch(p_keyboard_event->getKey()) {
-  case df::Keyboard::W:       // up
+  case df::Keyboard::A:       //Walk left
     if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN)
       move(-1);
     break;
-  case df::Keyboard::S:       // down
+  case df::Keyboard::D:       // Walk right
     if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN)
       move(+1);
     break;
-  case df::Keyboard::SPACE:   // nuke!
-    if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED)
-      nuke();
+  case df::Keyboard::SPACE:   //jump
+	  if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED) {
+		  jump(-2);
+	  }
+	  if (p_keyboard_event->getKeyboardAction() == df::KEY_RELEASED) {
+		  jump(+2);
+	  }
     break;
-  case df::Keyboard::Q:        // quit
+  case df::Keyboard::ESCAPE:        // quit
     if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED)
       WM.markForDelete(this);
     break;
@@ -139,7 +140,7 @@ void Hero::kbd(const df::EventKeyboard *p_keyboard_event) {
 }
 
 // Move up or down.
-void Hero::move(int dy) {
+void Hero::move(int dx) {
 
   // See if time to move.
   if (move_countdown > 0)
@@ -147,9 +148,9 @@ void Hero::move(int dy) {
   move_countdown = move_slowdown;
 
   // If stays on window, allow move.
-  df::Vector new_pos(getPosition().getX(), getPosition().getY() + dy);
-  if ((new_pos.getY() > 3) && 
-      (new_pos.getY() < WM.getBoundary().getVertical()-1))
+  df::Vector new_pos(getPosition().getX() + dx, getPosition().getY());
+  if ((new_pos.getX() > 3) && 
+      (new_pos.getX() < WM.getBoundary().getHorizontal()-1))
     WM.moveObject(this, new_pos);
 }
 
@@ -187,22 +188,62 @@ void Hero::step() {
 }
 
 // Send "nuke" event to all objects.
-void Hero::nuke() {
+void Hero::jump(int dy) {
+	df::Vector old_pos(getPosition().getX(), getPosition().getY());
+	
+	df::Vector new_pos(getPosition().getX() , getPosition().getY() + dy );
+	if ((new_pos.getY() > 3) &&
+		(new_pos.getY() < WM.getBoundary().getVertical() - 1)){
+		WM.moveObject(this, new_pos);
+		Sleep(4);
+	}
 
-  // Check if nukes left.
-  if (!nuke_count) 
-    return;
-  nuke_count--;
-
-  // Create "nuke" event and send to interested Objects.
-  EventNuke nuke;
-  WM.onEvent(&nuke);
- 
-  // Send "view" event do decrease number of nukes to interested ViewObjects.
-  df::EventView ev("Nukes", -1, true);
-  WM.onEvent(&ev);
-
-  // Play "nuke" sound.
-  df::Sound *p_sound = RM.getSound("nuke");
-  p_sound->play();
+	///WM.moveObject(this, old_pos);
 }
+
+//Function to kill the hero
+void Hero::die() {
+	// Make a big explosion with particles
+
+	// Play explosion sound
+	df::Sound* p_sound = RM.getSound("explode");
+	p_sound->play();
+
+	// Remove the Boss
+	WM.markForDelete(this);
+}
+
+//Check the collisions between Hero and other Objects
+void Hero::hit(const df::EventCollision* p_c) {
+	//If the one of the object collision is Saucer, don't delete Hero 
+	if (((p_c->getObject1()->getType()) == "Saucer")) {
+		WM.markForDelete(p_c->getObject1());
+		// Make a big explosion with particles.
+		df::EventView ev("HP", -1, true);
+		WM.onEvent(&ev);
+		life_count -= 1;
+		// Play "explode" sound.
+		df::Sound* p_sound = RM.getSound("explode");
+		p_sound->play();
+	}
+	//If the one of the object collision is Saucer
+	if (((p_c->getObject2()->getType()) == "Saucer")) {
+		WM.markForDelete(p_c->getObject2());
+		// Make a big explosion with particles.
+		
+		df::EventView ev("HP", -1, true);
+		WM.onEvent(&ev);
+		life_count -= 1;
+		// Play "explode" sound.
+		df::Sound* p_sound = RM.getSound("explode");
+		p_sound->play();
+	}
+	
+	//If hero died more than 3
+	if (life_count <= 0) {
+		die();
+		// Play "explode" sound.
+		df::Sound* p_sound = RM.getSound("explode");
+		p_sound->play();
+	}
+};

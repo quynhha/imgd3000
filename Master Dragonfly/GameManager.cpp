@@ -60,47 +60,47 @@ int df::GameManager::startUp()
 
 	// Start Log Manager
 	if (LM.startUp() != 0) {
-		printf("### FAILED TO START LOG MANAGER ###");
+		printf("### FAILED TO START LOG MANAGER ###\n");
 		return 1;
 	}
 	else {
-		LM.writeLog("### Log Manager Started Up ###");
+		LM.writeLog("### Log Manager Started Up ###\n");
 	}
 	
 	// Start World Manager
 	if (WM.startUp() != 0) {
-		LM.writeLog("### FAILED TO START WORLD MANAGER ###");
+		LM.writeLog("### FAILED TO START WORLD MANAGER ###\n");
 		return 1;
 	}
 	else {
-		LM.writeLog("### World Manager Started Up ###");
+		LM.writeLog("### World Manager Started Up ###\n");
 	}
 
 	// Start Display Manager
 	if (DM.startUp() != 0) {
-		LM.writeLog("### FAILED TO START DISPLAY MANAGER ###");
+		LM.writeLog("### FAILED TO START DISPLAY MANAGER ###\n");
 		return 1;
 	}
 	else {
-		LM.writeLog("### Display Manager Started Up ###");
+		LM.writeLog("### Display Manager Started Up ###\n");
 	}
 
 	// Start Input Manager
 	if (IM.startUp() != 0) {
-		LM.writeLog("### FAILED TO START INPUT MANAGER ###");
+		LM.writeLog("### FAILED TO START INPUT MANAGER ###\n");
 		return 1;
 	}
 	else {
-		LM.writeLog("### Input Manager Started Up ###");
+		LM.writeLog("### Input Manager Started Up ###\n");
 	}
 
 	// Start Resource Manager
 	if (RM.startUp() != 0) {
-		LM.writeLog("### FAILED TO START RESOURCE MANAGER ###");
+		LM.writeLog("### FAILED TO START RESOURCE MANAGER ###\n");
 		return 1;
 	}
 	else {
-		LM.writeLog("### Resource Manager Started Up ###");
+		LM.writeLog("### Resource Manager Started Up ###\n");
 	}
 
 	WM.setBoundary(Box(Vector(0, 0), DM.getHorizontal(), DM.getVertical()));
