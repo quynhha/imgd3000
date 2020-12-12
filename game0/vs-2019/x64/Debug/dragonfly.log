@@ -1,0 +1,9 @@
+14:18:51    0 ****************************************************
+14:18:51    0 ** Dragonfly version 4.15 **
+14:18:51    0 ** Game engine started **
+14:18:51    0 ****************************************************
+14:18:51    0 DisplayManager::startUp(): Unable to load font from file 'df-font.ttf'.
+14:18:51    0 Error starting display manager!
+14:18:51    0 Error starting game manager!
+14:18:51    0 ****************************************************
+14:18:51    0 ** Game engine stopped **

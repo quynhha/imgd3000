@@ -1,0 +1,51 @@
+19:53:04    0 ****************************************************
+19:53:04    0 ** Dragonfly version 4.15 **
+19:53:04    0 ** Game engine started **
+19:53:04    0 ****************************************************
+19:53:05    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+19:53:05    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
+19:53:05    3 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/saucer-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'saucer' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/ship-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'ship' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'bullet' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'explosion' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'gameover' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/enemy-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'enemy' loaded.
+19:53:08   90 ResourceManager::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+19:53:08   90 ResourceManager::loadSprite(): Sprite 'gamestart' loaded.
+19:53:08   90 Pause::Pause(): Pause enabled.  Press any other key to resume.
+19:53:09    7 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+19:53:09   10 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+19:53:09   16 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+19:53:09   17 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+19:53:09   18 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+19:53:09   19 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+19:53:09   28 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+19:53:09   31 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
+19:53:09   34 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:09   35 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
+19:53:10   36 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
+19:53:10   37 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:10   38 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+19:53:10   39 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
+19:53:10   40 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+19:53:10   44 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
+19:53:10   60 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:11   65 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:11   70 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
+19:53:11   73 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
+19:53:11   74 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
+19:53:11   78 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
+19:53:11   79 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:11   80 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
+19:53:11   81 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
+19:53:11   84 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
+19:53:11   85 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
+19:53:12   94 ****************************************************
+19:53:12   94 ** Game engine stopped **

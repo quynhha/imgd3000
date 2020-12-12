@@ -1,0 +1,18 @@
+<HEADER>
+frames 1
+width 9
+height 5
+color green
+slowdown 15
+</HEADER>
+<BODY>
+   ,-.   
+ _(*_*)_ 
+(_  o  _)
+  / o \  
+ (_/ \_) 
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

@@ -1,0 +1,17 @@
+﻿  Door.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\Door.cpp(8,10): fatal error C1083: Cannot open include file: '../Points.h': No such file or directory
+  game.cpp
+  GameStart.cpp
+  GameWin.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\GameWin.cpp(7,10): fatal error C1083: Cannot open include file: '../GameStart.h': No such file or directory
+  Hero.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\Hero.cpp(213,14): warning C4553: '==': result of expression not used; did you intend '='?
+  Magic.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\Magic.cpp(2,10): fatal error C1083: Cannot open include file: '../Saucer.h': No such file or directory
+  Reticle.cpp
+  Saucer.cpp
+  Screen.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\Screen.cpp(3,10): fatal error C1083: Cannot open include file: '../Food.h': No such file or directory
+  Star.cpp
+C:\Users\Quynh Ha\Documents\Visual Studio 2019\Projects\game0\Star.cpp(41,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
